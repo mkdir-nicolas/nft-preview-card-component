@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    /*PRIMARY*/
+    --Soft_blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /*NEUTRAL*/
+    --Very_dark_blue__main_BG: hsl(217, 54%, 11%);
+    --Very_dark_blue__card_BG: hsl(216, 50%, 16%);
+    --Very_dark_blue__line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+html{
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Very_dark_blue__main_BG);
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card{
+    background-color: var(--Very_dark_blue__card_BG);
+    max-width: 320px;
+    border-radius: .7rem;
+    padding: 1.2rem;
+    border: 1px solid var(--Very_dark_blue__card_BG);
+    box-shadow: var(--Very_dark_blue__card_BG) 0 0 1rem;
+    
+}
+.card-source{
+    border-radius: .5rem;
+    width: 100%;
+    display: block;
+    position: relative;
+
+}
+
+.card-image{
+    position: relative;
+    width: 100%;
+}
+
+.card-image__cover{
+    position: absolute;
+    background: url(../images/icon-view.svg) no-repeat center hsla(178, 100%, 50%, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.card-image:hover .card-image__cover{
+    opacity: 1;
+}
+
+.card-title{
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 3rem;
+}
+.card-title:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.card-description{
+    font-size: 200;
+    font-size: .9rem;
+    font-weight: 200;
+    line-height: 1.4rem;
+    color: var(--Soft_blue);
+}
+
+.card-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-price{
+    display: flex;
+    color: var(--Cyan);
+}
+
+.card-price::before{
+    content: url(../images/icon-ethereum.svg);
+    margin-right: .5rem;
+    margin-top: .1rem;
+}
+
+.card-time{
+    display: flex;
+    color: var(--Soft_blue);
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.card-time::before{
+    content: url(../images/icon-clock.svg);
+    margin-right: .3rem;
+    margin-top: .1rem;
+}
+.card-line{
+    border-top: 1px solid;
+    color: var(--Very_dark_blue__line);
+}
+.card-line::after{
+    border-top: 1px;
+}
+
+.card-footer{
+ 
+    font-size: .9rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.card-footer img{
+    content: url(../images/image-avatar.png);
+    width: 2rem;
+    border-radius: 50%;
+    border: 1.5px solid;
+    margin-right: 1rem;
+}
+.card-footer p{
+    color: var(--Soft_blue);
+}
+.card-footer span{
+    color: var(--White);
+}
+
+.card-footer span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
